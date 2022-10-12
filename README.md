@@ -1,6 +1,7 @@
-- 👋 Hi, I’m @ConsultingLand
+- 👋 Hi, I’m @ConsultingLand Business Analyst
+Analyst Business Intelligence
 - 👀 I’m interested in web.3 blockchain crypto python trading Trading bot ccxt
-- 🌱 I’m currently learning python
+- 🌱 I’m currently learning python & Data Analysis & Data streaming in real time.
 - 💞️ I’m looking to collaborate on Trading bot
 - 📫 How to reach me consulting.land
 
