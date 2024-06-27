@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @ConsultingLand Business Analyst
+- 👋 Hi, I’m @ConsultingLand 
 Analyst Business Intelligence
 - 👀 I’m interested in web.3 blockchain technology in agriculture & Science & Education
 - 🌱 I’m interested in python & Data Analysis & Data streaming in real time.
