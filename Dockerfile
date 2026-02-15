@@ -1,7 +1,25 @@
+# Build stage
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Build the Astro site
+RUN npm run build
+
+# Production stage
 FROM nginx:alpine
 
-# Copy built static files
-COPY dist/ /usr/share/nginx/html/
+# Copy built static files from builder
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Custom nginx config for SPA routing
 RUN echo 'server { \
