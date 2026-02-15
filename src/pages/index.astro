@@ -1,0 +1,340 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Ihr Laden läuft – wir machen ihn sichtbar">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-cream-dark">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-display text-terracotta font-bold">
+        Consulting.Land
+      </a>
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#leistungen" class="text-text-light hover:text-terracotta transition">Leistungen</a>
+        <a href="#ueber" class="text-text-light hover:text-terracotta transition">Über mich</a>
+        <a href="#kontakt" class="bg-terracotta text-white px-5 py-2 rounded-full hover:bg-terracotta-dark transition">
+          Gespräch vereinbaren
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <!-- Animated Background Waves -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-terracotta/10 rounded-full blur-3xl animate-wave"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-olive/10 rounded-full blur-3xl animate-wave" style="animation-delay: -2s;"></div>
+      <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-terracotta/5 rounded-full blur-2xl animate-float"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-display text-text leading-tight mb-6">
+        Ihr Laden läuft –<br>
+        <span class="text-terracotta">wir machen ihn sichtbar.</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-text-light max-w-2xl mx-auto mb-10">
+        Digitale Begleitung für Handwerk & Einzelhandel.<br>
+        Ohne Buzzwords. Ohne Überforderung.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#kontakt" class="bg-terracotta text-white px-8 py-4 rounded-full text-lg hover:bg-terracotta-dark transition shadow-lg hover:shadow-xl">
+          Kostenloses Erstgespräch
+        </a>
+        <a href="#leistungen" class="border-2 border-olive text-olive px-8 py-4 rounded-full text-lg hover:bg-olive hover:text-white transition">
+          Was wir tun
+        </a>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+      <svg class="w-6 h-10 text-text-light" fill="none" stroke="currentColor" viewBox="0 0 24 40">
+        <rect x="1" y="1" width="22" height="38" rx="11" stroke-width="2"/>
+        <circle cx="12" cy="12" r="3" fill="currentColor" class="animate-pulse"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Pain Points Section -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-display text-center mb-4 fade-in">
+        Kommt Ihnen das <span class="text-terracotta">bekannt</span> vor?
+      </h2>
+      <p class="text-text-light text-center mb-16 max-w-2xl mx-auto fade-in">
+        Diese Sätze hören wir täglich von Ladenbesitzern wie Ihnen.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-cream p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-in">
+          <div class="text-4xl mb-4">⏰</div>
+          <p class="text-lg italic text-text-light">
+            „Ich habe keine Zeit für Social Media – mein Laden läuft schon."
+          </p>
+        </div>
+        <div class="bg-cream p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-in">
+          <div class="text-4xl mb-4">⭐</div>
+          <p class="text-lg italic text-text-light">
+            „Google Bewertungen? Die schreiben doch eh nur Negatives."
+          </p>
+        </div>
+        <div class="bg-cream p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-in">
+          <div class="text-4xl mb-4">🤖</div>
+          <p class="text-lg italic text-text-light">
+            „KI? Das ist doch nur was für Großkonzerne."
+          </p>
+        </div>
+        <div class="bg-cream p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-in">
+          <div class="text-4xl mb-4">📍</div>
+          <p class="text-lg italic text-text-light">
+            „Meine Kunden finden mich nicht online – dabei bin ich seit 20 Jahren hier."
+          </p>
+        </div>
+      </div>
+      
+      <p class="text-center text-xl mt-12 text-olive font-medium fade-in">
+        Wir verstehen das. Und wir helfen – <span class="underline">ohne Technik-Overload</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Customer Journey Section -->
+  <section id="journey" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-display text-center mb-4 fade-in">
+        Ihr Weg zu mehr <span class="text-olive">Sichtbarkeit</span>
+      </h2>
+      <p class="text-text-light text-center mb-16 max-w-2xl mx-auto fade-in">
+        In vier einfachen Schritten begleiten wir Sie – ohne Stress, ohne Fachchinesisch.
+      </p>
+      
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="text-center fade-in">
+          <div class="w-20 h-20 mx-auto mb-6 bg-terracotta/10 rounded-full flex items-center justify-center animate-pulse-soft">
+            <svg class="w-10 h-10 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display mb-2">1. Suchen</h3>
+          <p class="text-text-light">Wir schauen gemeinsam, wo Sie heute stehen.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="text-center fade-in">
+          <div class="w-20 h-20 mx-auto mb-6 bg-olive/10 rounded-full flex items-center justify-center animate-pulse-soft" style="animation-delay: -1s;">
+            <svg class="w-10 h-10 text-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display mb-2">2. Verstehen</h3>
+          <p class="text-text-light">Wir hören hin – was brauchen Ihre Kunden wirklich?</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="text-center fade-in">
+          <div class="w-20 h-20 mx-auto mb-6 bg-terracotta/10 rounded-full flex items-center justify-center animate-pulse-soft" style="animation-delay: -2s;">
+            <svg class="w-10 h-10 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display mb-2">3. Begleitung</h3>
+          <p class="text-text-light">Mensch und Technik arbeiten Hand in Hand.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="text-center fade-in">
+          <div class="w-20 h-20 mx-auto mb-6 bg-olive/10 rounded-full flex items-center justify-center animate-pulse-soft" style="animation-delay: -3s;">
+            <svg class="w-10 h-10 text-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display mb-2">4. Strahlen</h3>
+          <p class="text-text-light">Ihre Kunden finden Sie – und kommen wieder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="leistungen" class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-display text-center mb-4 fade-in">
+        Was wir für Sie <span class="text-terracotta">tun</span>
+      </h2>
+      <p class="text-text-light text-center mb-16 max-w-2xl mx-auto fade-in">
+        Kleine Helfer, große Wirkung – maßgeschneidert für Ihren Laden.
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-cream p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+          <div class="w-14 h-14 bg-terracotta/10 rounded-xl flex items-center justify-center mb-6">
+            <span class="text-3xl">🌟</span>
+          </div>
+          <h3 class="text-xl font-display mb-3">Google Bewertungen</h3>
+          <p class="text-text-light mb-4">
+            Automatische Erinnerungen nach dem Einkauf. Mehr echte Bewertungen, weniger Aufwand für Sie.
+          </p>
+          <span class="text-olive font-medium">→ Einfach wie ein Kassenbon</span>
+        </div>
+        
+        <div class="bg-cream p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+          <div class="w-14 h-14 bg-olive/10 rounded-xl flex items-center justify-center mb-6">
+            <span class="text-3xl">📍</span>
+          </div>
+          <h3 class="text-xl font-display mb-3">Google Maps Profil</h3>
+          <p class="text-text-light mb-4">
+            Wir machen Ihren Eintrag sichtbar – mit aktuellen Fotos, Öffnungszeiten und Angeboten.
+          </p>
+          <span class="text-olive font-medium">→ Damit man Sie findet</span>
+        </div>
+        
+        <div class="bg-cream p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+          <div class="w-14 h-14 bg-terracotta/10 rounded-xl flex items-center justify-center mb-6">
+            <span class="text-3xl">💬</span>
+          </div>
+          <h3 class="text-xl font-display mb-3">Kundenbindung</h3>
+          <p class="text-text-light mb-4">
+            Persönliche Nachrichten zu Geburtstagen, Feiertagen oder wenn's was Neues gibt.
+          </p>
+          <span class="text-olive font-medium">→ Wie früher, nur einfacher</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="ueber" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <div class="bg-gradient-to-br from-terracotta/20 to-olive/20 rounded-3xl p-8 aspect-square flex items-center justify-center">
+            <div class="text-center">
+              <div class="text-8xl mb-4">👋</div>
+              <p class="text-text-light">Foto kommt noch</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <h2 class="text-3xl md:text-4xl font-display mb-6">
+            Nerd trifft <span class="text-terracotta">Praxisleben</span>
+          </h2>
+          <p class="text-lg text-text-light mb-6">
+            Mehrere Jahre als Fachberater für Elektrohaushaltsgeräte (SEB/Krups, De'Longhi) + seit 2023 Merchandiser für Apple im deutschen Raum.
+          </p>
+          <p class="text-lg text-text-light mb-6">
+            <strong class="text-text">Ich verstehe nicht nur Technik</strong> – ich weiß, wie Geräte im Regal verkauft werden und wie Kunden sie erleben.
+          </p>
+          <p class="text-lg text-text-light mb-8">
+            Deshalb spreche ich Ihre Sprache. Keine Buzzwords, keine Überforderung – nur das, was Ihrem Laden wirklich hilft.
+          </p>
+          <a href="#kontakt" class="inline-flex items-center gap-2 text-terracotta font-medium hover:gap-3 transition-all">
+            Lernen wir uns kennen
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="kontakt" class="py-24 bg-olive/5">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-display text-center mb-4 fade-in">
+        Lassen Sie uns <span class="text-olive">sprechen</span>
+      </h2>
+      <p class="text-text-light text-center mb-4 max-w-xl mx-auto fade-in">
+        Julia antwortet innerhalb von 2 Stunden persönlich.
+      </p>
+      <p class="text-terracotta text-center mb-12 fade-in">
+        <a href="mailto:hallo@consulting.land" class="hover:underline">hallo@consulting.land</a>
+      </p>
+      
+      <form class="bg-cream p-8 md:p-12 rounded-3xl shadow-lg fade-in">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2">Ihr Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-cream-dark focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 outline-none transition"
+              placeholder="Max Mustermann"
+            />
+          </div>
+          <div>
+            <label for="business" class="block text-sm font-medium mb-2">Ihr Geschäft</label>
+            <input 
+              type="text" 
+              id="business" 
+              name="business"
+              class="w-full px-4 py-3 rounded-xl border border-cream-dark focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 outline-none transition"
+              placeholder="Bäckerei Müller"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="email" class="block text-sm font-medium mb-2">E-Mail</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            required
+            class="w-full px-4 py-3 rounded-xl border border-cream-dark focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 outline-none transition"
+            placeholder="ihre@email.de"
+          />
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block text-sm font-medium mb-2">Ihre Nachricht</label>
+          <textarea 
+            id="message" 
+            name="message"
+            rows="4"
+            class="w-full px-4 py-3 rounded-xl border border-cream-dark focus:border-terracotta focus:ring-2 focus:ring-terracotta/20 outline-none transition resize-none"
+            placeholder="Erzählen Sie mir von Ihrem Laden..."
+          ></textarea>
+        </div>
+        <button 
+          type="submit"
+          class="w-full bg-terracotta text-white py-4 rounded-xl text-lg font-medium hover:bg-terracotta-dark transition shadow-lg hover:shadow-xl"
+        >
+          Nachricht senden
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-text text-cream py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-display mb-4">Consulting.Land</h3>
+          <p class="text-cream/70">
+            Digitale Begleitung für Handwerk & Einzelhandel im DACH-Raum.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-medium mb-4">Kontakt</h4>
+          <p class="text-cream/70">
+            <a href="mailto:hallo@consulting.land" class="hover:text-terracotta transition">hallo@consulting.land</a>
+          </p>
+        </div>
+        <div>
+          <h4 class="font-medium mb-4">Rechtliches</h4>
+          <div class="flex gap-4">
+            <a href="/impressum" class="text-cream/70 hover:text-terracotta transition">Impressum</a>
+            <a href="/datenschutz" class="text-cream/70 hover:text-terracotta transition">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-cream/20 pt-8 text-center text-cream/50">
+        <p>&copy; 2026 Consulting.Land. Mit ❤️ für lokale Unternehmen.</p>
+      </div>
+    </div>
+  </footer>
+</Layout>
