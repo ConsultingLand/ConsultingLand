@@ -1,0 +1,5 @@
+# ads.txt – consulting.land
+# Nach AdSense-Genehmigung: Publisher-ID unten einfügen (ca-pub-XXXXXXXXXXXXXXXX)
+# Format: google.com, [PUBLISHER-ID], DIRECT, f08c47fec0942fa0
+
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Consulting.Land – Digitale Sichtbarkeit für Handwerk & Einzelhandel. Google-zertifiziert. Social Media, Google Maps, Bewertungen & mehr. Regional. Persönlich. Effizient.">
+<meta name="keywords" content="digitales marketing handwerk, google my business, social media betreuung, lokales marketing, google ads, consulting">
+<meta name="author" content="Consulting.Land">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Consulting.Land – Ihr Laden läuft, wir machen ihn sichtbar">
+<meta property="og:description" content="Google-zertifizierte digitale Begleitung für lokale Unternehmen im DACH-Raum.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://consulting.land">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<title>Consulting.Land – Digitale Sichtbarkeit für Handwerk & Einzelhandel</title>
+
+<!-- Self-hosted fonts fallback – swap to local when available -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Consulting.Land",
+  "email": "hallo@consulting.land",
+  "url": "https://consulting.land",
+  "description": "Google-zertifizierte digitale Begleitung für Handwerk und Einzelhandel im DACH-Raum",
+  "areaServed": ["DE", "AT", "CH"],
+  "knowsAbout": ["Google Ads", "Google My Business", "Social Media Marketing", "Lokales Marketing", "Google Analytics"],
+  "hasCredential": [
+    {"@type": "EducationalOccupationalCredential", "name": "Google Ads Display Certification"},
+    {"@type": "EducationalOccupationalCredential", "name": "Google Ads Search Certification"},
+    {"@type": "EducationalOccupationalCredential", "name": "Google Analytics Individual Qualification"}
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   DESIGN SYSTEM – CSS VARIABLES
+   ============================================================ */
+:root {
+  --bg:        #080810;
+  --surface:   #0e0e1a;
+  --card:      #13131f;
+  --card-hov:  #181828;
+  --border:    rgba(255,255,255,0.06);
+  --border-hov:rgba(255,255,255,0.12);
+
+  --accent:    #00e5a0;
+  --accent-dim:rgba(0,229,160,0.12);
+  --accent2:   #6c5ce7;
+  --accent3:   #fd7c7c;
+  --google-b:  #4285F4;
+  --google-r:  #EA4335;
+  --google-y:  #FBBC05;
+  --google-g:  #34A853;
+
+  --text:      #eeeef5;
+  --text-sub:  #9898b0;
+  --text-dim:  #5a5a72;
+
+  --radius-sm: 12px;
+  --radius:    20px;
+  --radius-lg: 28px;
+
+  --shadow:    0 4px 40px rgba(0,0,0,0.4);
+  --glow:      0 0 40px rgba(0,229,160,0.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Instrument Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   COOKIE BANNER
+   ============================================================ */
+#cookie-banner {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(640px, calc(100vw - 2rem));
+  background: var(--card);
+  border: 1px solid var(--border-hov);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  z-index: 999;
+  box-shadow: var(--shadow);
+  display: none;
+  animation: slideUp 0.4s ease;
+}
+
+#cookie-banner.show { display: block; }
+
+@keyframes slideUp {
+  from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+  to   { transform: translateX(-50%) translateY(0);    opacity: 1; }
+}
+
+.cookie-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cookie-text {
+  font-size: 0.82rem;
+  color: var(--text-sub);
+  margin-bottom: 1rem;
+  line-height: 1.55;
+}
+
+.cookie-text a { color: var(--accent); text-decoration: none; }
+
+.cookie-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cookie-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.82rem;
+}
+
+.cookie-toggle span { color: var(--text-sub); }
+
+.toggle-switch {
+  position: relative;
+  width: 36px; height: 20px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--text-dim);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toggle-slider::after {
+  content: '';
+  position: absolute;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: white;
+  left: 3px; top: 3px;
+  transition: transform 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-slider { background: var(--accent); }
+.toggle-switch input:checked + .toggle-slider::after { transform: translateX(16px); }
+.toggle-switch input:disabled + .toggle-slider { opacity: 0.5; cursor: not-allowed; }
+
+.cookie-btns {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.cookie-btn-all {
+  flex: 1;
+  background: var(--accent);
+  color: #080810;
+  border: none;
+  padding: 0.65rem 1rem;
+  border-radius: 100px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cookie-btn-all:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0,229,160,0.3);
+}
+
+.cookie-btn-sel {
+  flex: 1;
+  background: transparent;
+  color: var(--text-sub);
+  border: 1px solid var(--border-hov);
+  padding: 0.65rem 1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cookie-btn-sel:hover { background: rgba(255,255,255,0.05); }
+
+/* ============================================================
+   CANVAS BG
+   ============================================================ */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 90;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: rgba(8,8,16,0.75);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo-dot { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+}
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: #080810 !important;
+  font-weight: 700 !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 20px rgba(0,229,160,0.35) !important;
+  background: var(--accent) !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 7rem 2rem 4rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 780px;
+  text-align: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-dim);
+  border: 1px solid rgba(0,229,160,0.2);
+  color: var(--accent);
+  padding: 0.4rem 1.1rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.2s forwards;
+}
+
+.pill-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity:1; } 50% { opacity:0.3; }
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.4rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.3s forwards;
+}
+
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--accent) 0%, #00c4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-sub);
+  max-width: 520px;
+  margin: 0 auto 2.2rem;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.4s forwards;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.5s forwards;
+}
+
+.btn-prime {
+  background: var(--accent);
+  color: #080810;
+  padding: 0.9rem 2.2rem;
+  border-radius: 100px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-prime:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  padding: 0.9rem 2.2rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid var(--border-hov);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Hero stats floating */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.7s forwards;
+}
+
+.h-stat {
+  text-align: center;
+  padding: 1rem 1.8rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.h-stat:hover {
+  border-color: rgba(0,229,160,0.2);
+  transform: translateY(-3px);
+}
+
+.h-stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.h-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-sub);
+  letter-spacing: 0.03em;
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 0.5s 1.4s forwards;
+}
+
+.scroll-hint p {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scrollPulse 2s 1.5s infinite;
+}
+
+@keyframes scrollPulse {
+  0% { transform: scaleY(0); transform-origin: top; opacity: 1; }
+  60% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  100% { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
+}
+
+/* ============================================================
+   GOOGLE CERTIFICATIONS STRIP
+   ============================================================ */
+.certs-strip {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.015);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+}
+
+.certs-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certs-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.cert-badge:hover {
+  border-color: var(--border-hov);
+  color: var(--text);
+}
+
+.g-icon {
+  width: 22px; height: 22px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.g-icon-ads    { background: linear-gradient(135deg, var(--google-b), #0066cc); color: white; }
+.g-icon-search { background: linear-gradient(135deg, var(--google-y), var(--google-r)); color: white; }
+.g-icon-ga     { background: linear-gradient(135deg, var(--google-g), #00a152); color: white; }
+
+.cert-divider {
+  width: 1px; height: 20px;
+  background: var(--border);
+}
+
+.gmb-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(66,133,244,0.1);
+  border: 1px solid rgba(66,133,244,0.25);
+  color: var(--google-b);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.gmb-link:hover { background: rgba(66,133,244,0.18); }
+
+/* ============================================================
+   SECTION COMMONS
+   ============================================================ */
+section { position: relative; z-index: 1; padding: 5.5rem 2rem; }
+
+.wrap { max-width: 1100px; margin: 0 auto; }
+
+.sec-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.sec-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.sec-sub {
+  color: var(--text-sub);
+  font-size: 1.05rem;
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.vis { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   PROBLEM SECTION
+   ============================================================ */
+.sec-alt {
+  background: rgba(255,255,255,0.012);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.prob-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+}
+
+.prob-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.7rem;
+  transition: transform 0.3s, border-color 0.3s, background 0.3s;
+  cursor: default;
+}
+
+.prob-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108,92,231,0.3);
+  background: var(--card-hov);
+}
+
+.prob-emoji { font-size: 1.8rem; margin-bottom: 0.8rem; display: block; }
+
+.prob-card p {
+  color: var(--text-sub);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.svc-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.svc-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #00c4ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.svc-card:hover { transform: translateY(-5px); border-color: rgba(0,229,160,0.15); }
+.svc-card:hover::after { transform: scaleX(1); }
+
+.svc-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.svc-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.svc-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.02em;
+}
+
+.svc-card p {
+  color: var(--text-sub);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.svc-tag {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  padding: 0.28rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   GOOGLE MY BUSINESS SECTION
+   ============================================================ */
+.gmb-section {
+  background: rgba(66,133,244,0.03);
+  border-top: 1px solid rgba(66,133,244,0.1);
+  border-bottom: 1px solid rgba(66,133,244,0.1);
+}
+
+.gmb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.gmb-visual {
+  position: relative;
+}
+
+/* Simulated Google Business card */
+.gmb-card-sim {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  max-width: 340px;
+}
+
+.gmb-card-header {
+  background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+  padding: 1.5rem;
+  color: white;
+}
+
+.gmb-card-header h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.gmb-card-header p {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+.gmb-card-body {
+  padding: 1.2rem;
+  background: #f8f9fa;
+}
+
+.gmb-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.gmb-meta-row:last-child { border-bottom: none; }
+.gmb-meta-icon { font-size: 0.9rem; width: 20px; text-align: center; }
+
+.gmb-stars {
+  display: flex;
+  gap: 2px;
+  color: var(--google-y);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.gmb-stars span { color: #333; font-size: 0.75rem; margin-left: 4px; }
+
+.gmb-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: white;
+}
+
+.gmb-action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--google-b);
+  background: rgba(66,133,244,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.gmb-action-btn:hover { background: rgba(66,133,244,0.15); }
+
+.gmb-floating-badge {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background: var(--accent);
+  color: #080810;
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.78rem;
+  box-shadow: var(--glow);
+  text-align: center;
+  line-height: 1.3;
+  animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+  0%,100% { transform: translateY(0) rotate(-2deg); }
+  50%      { transform: translateY(-6px) rotate(-2deg); }
+}
+
+.gmb-info h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.gmb-info p {
+  color: var(--text-sub);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.gmb-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.gmb-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  color: var(--text-sub);
+}
+
+.gmb-feature::before {
+  content: '✓';
+  width: 20px; height: 20px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.gmb-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--google-b);
+  color: white;
+  padding: 0.85rem 1.8rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gmb-open-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(66,133,244,0.35);
+}
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+.process-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.process-row::before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), var(--border), transparent);
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 0.5rem;
+}
+
+.step-circle {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+.step:hover .step-circle {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.step h4 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.step p {
+  color: var(--text-sub);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   REFERENCES MARQUEE
+   ============================================================ */
+.marquee-section { padding: 3.5rem 0; overflow: hidden; }
+
+.marquee-wrap {
+  overflow: hidden;
+  mask: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ref-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 2.5rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  transition: color 0.3s;
+  border-right: 1px solid var(--border);
+}
+
+.ref-chip:hover { color: var(--text-sub); }
+.ref-chip-dot { color: var(--accent); font-size: 0.4rem; }
+
+/* ============================================================
+   ABOUT / TIMELINE
+   ============================================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-text h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.about-text p {
+  color: var(--text-sub);
+  line-height: 1.75;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+.about-highlight {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--accent) !important;
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tl-item {
+  display: flex;
+  gap: 1.2rem;
+  padding-bottom: 1.8rem;
+  position: relative;
+}
+
+.tl-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 13px; top: 28px; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.tl-dot {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+}
+
+.tl-body h4 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.tl-body p {
+  color: var(--text-sub);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.proj-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  text-decoration: none;
+  transition: transform 0.3s, border-color 0.3s;
+  display: block;
+}
+
+.proj-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0,229,160,0.2);
+}
+
+.proj-emoji { font-size: 1.4rem; margin-bottom: 0.5rem; display: block; }
+
+.proj-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.proj-type {
+  font-size: 0.75rem;
+  color: var(--text-sub);
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact-info h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.contact-info > p {
+  color: var(--text-sub);
+  line-height: 1.75;
+  font-size: 0.93rem;
+  margin-bottom: 1.8rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.88rem;
+  color: var(--text-sub);
+}
+
+.cd-icon {
+  width: 34px; height: 34px;
+  background: var(--accent-dim);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.contact-detail a { color: var(--text-sub); text-decoration: none; }
+.contact-detail a:hover { color: var(--text); }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+
+input, textarea, select {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.1rem;
+  color: var(--text);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  -webkit-appearance: none;
+}
+
+input::placeholder, textarea::placeholder { color: var(--text-dim); }
+
+input:focus, textarea:focus, select:focus {
+  border-color: rgba(0,229,160,0.4);
+  background: rgba(0,229,160,0.04);
+}
+
+textarea { resize: vertical; min-height: 110px; }
+
+.form-btn {
+  background: var(--accent);
+  color: #080810;
+  border: none;
+  padding: 0.95rem;
+  border-radius: 100px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.form-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow);
+}
+
+#form-success {
+  display: none;
+  text-align: center;
+  color: var(--accent);
+  font-size: 0.88rem;
+  padding: 0.5rem;
+}
+
+/* ============================================================
+   ADSENSE ZONES (hidden placeholders)
+   ============================================================ */
+.ad-zone {
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Remove border/bg in production – only for dev visibility */
+  /* border: 1px dashed rgba(255,255,255,0.05); */
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem 2rem;
+}
+
+.footer-top {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-brand p {
+  color: var(--text-sub);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  margin-top: 0.8rem;
+  max-width: 280px;
+}
+
+.footer-col h5 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--text-sub);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.footer-col a, .footer-col button {
+  display: block;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 0.55rem;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.footer-col a:hover, .footer-col button:hover { color: var(--text); }
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 1.5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy { color: var(--text-dim); font-size: 0.78rem; }
+
+.footer-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.f-badge {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .services-grid { grid-template-columns: 1fr; }
+  .gmb-grid { grid-template-columns: 1fr; }
+  .gmb-visual { display: none; }
+  .process-row { grid-template-columns: repeat(2, 1fr); }
+  .process-row::before { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-box { grid-template-columns: 1fr; gap: 2.5rem; padding: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 1rem 1.2rem; }
+  section { padding: 4rem 1.2rem; }
+  .hero { padding: 6rem 1.2rem 4rem; }
+  .process-row { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .contact-box { padding: 1.5rem; }
+  .hero-stats { gap: 0.8rem; }
+  .h-stat { padding: 0.8rem 1.2rem; }
+}
+
+/* Mobile nav open */
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  background: rgba(8,8,16,0.97);
+  padding: 1.5rem;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+}
+
+.nav-links.open a {
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     CANVAS BACKGROUND
+     ============================================================ -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ============================================================
+     COOKIE BANNER
+     ============================================================ -->
+<div id="cookie-banner">
+  <div class="cookie-title">🍪 Datenschutz & Cookies</div>
+  <p class="cookie-text">
+    Wir nutzen Cookies um Ihnen die beste Erfahrung zu bieten. Notwendige Cookies sind immer aktiv.
+    Marketing-Cookies (z.B. Google AdSense) benötigen Ihre Einwilligung.
+    Mehr unter <a href="/datenschutz.html">Datenschutzerklärung</a>.
+  </p>
+  <div class="cookie-toggles">
+    <div class="cookie-toggle">
+      <span>✅ Notwendige Cookies</span>
+      <label class="toggle-switch">
+        <input type="checkbox" checked disabled>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="cookie-toggle">
+      <span>📊 Funktionale Cookies</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-func">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="cookie-toggle">
+      <span>📢 Marketing / Google AdSense</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-ads">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-btn-all" onclick="acceptAll()">Alle akzeptieren</button>
+    <button class="cookie-btn-sel" onclick="saveSelection()">Auswahl speichern</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="main-nav">
+  <a href="/" class="logo">Consulting<span class="logo-dot">.</span>Land</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#google-profil">Google Profil</a></li>
+    <li><a href="#referenzen">Referenzen</a></li>
+    <li><a href="#ueber">Über uns</a></li>
+    <li><a href="#kontakt" class="nav-cta">Gespräch buchen</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="glow-orb" style="width:700px;height:700px;background:rgba(0,229,160,0.05);top:-200px;left:-150px;"></div>
+  <div class="glow-orb" style="width:500px;height:500px;background:rgba(108,92,231,0.07);bottom:0;right:-100px;"></div>
+
+  <div class="hero-content">
+    <div class="pill">
+      <span class="pill-dot"></span>
+      Google Zertifiziert · Regional · DACH-Raum
+    </div>
+
+    <h1>Ihr Laden läuft –<br>wir machen ihn<br><em>sichtbar.</em></h1>
+
+    <p class="hero-sub">
+      Digitale Begleitung für Handwerk & Einzelhandel.<br>
+      Kein Technik-Chaos. Keine leeren Versprechen. Echte Ergebnisse.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#kontakt" class="btn-prime">Kostenloses Erstgespräch</a>
+      <a href="#leistungen" class="btn-ghost">Was wir tun →</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="h-stat">
+        <span class="h-stat-num">3×</span>
+        <span class="h-stat-label">Google Zertifiziert</span>
+      </div>
+      <div class="h-stat">
+        <span class="h-stat-num">2017</span>
+        <span class="h-stat-label">Im Einsatz seit</span>
+      </div>
+      <div class="h-stat">
+        <span class="h-stat-num">50+</span>
+        <span class="h-stat-label">Kunden betreut</span>
+      </div>
+      <div class="h-stat">
+        <span class="h-stat-num">100%</span>
+        <span class="h-stat-label">DSGVO-konform</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <p>Scroll</p>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GOOGLE CERTIFICATIONS STRIP
+     ============================================================ -->
+<div class="certs-strip reveal">
+  <div class="certs-inner">
+    <span class="certs-label">Zertifiziert von Google:</span>
+
+    <div class="cert-badge">
+      <div class="g-icon g-icon-ads">Ads</div>
+      Google Ads Display Certification
+    </div>
+
+    <div class="cert-badge">
+      <div class="g-icon g-icon-search">🔍</div>
+      Google Ads Search Certification
+    </div>
+
+    <div class="cert-badge">
+      <div class="g-icon g-icon-ga">GA</div>
+      Google Analytics IQ
+    </div>
+
+    <div class="cert-divider"></div>
+
+    <a href="https://share.google/tLvUBvVXKmT4RsITs" target="_blank" rel="noopener" class="gmb-link">
+      📍 Google Business Profil ansehen
+    </a>
+  </div>
+</div>
+
+<!-- AdSense Zone 1 – after hero/certs -->
+<!-- ADSENSE ZONE TOP: 728x90 responsive
+<div class="ad-zone" style="padding: 1rem 2rem;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+-->
+
+<!-- ============================================================
+     PROBLEM SECTION
+     ============================================================ -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="sec-label reveal">Kommt Ihnen das bekannt vor?</div>
+    <h2 class="sec-title reveal">Wir kennen Ihre Herausforderungen.</h2>
+    <p class="sec-sub reveal">Diese Sätze hören wir täglich – und haben für jeden eine klare Antwort.</p>
+
+    <div class="prob-grid">
+      <div class="prob-card reveal">
+        <span class="prob-emoji">⏰</span>
+        <p>„Ich habe keine Zeit für Social Media – mein Laden läuft schon."</p>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-emoji">⭐</span>
+        <p>„Google Bewertungen? Die schreiben doch eh nur Negatives."</p>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-emoji">🤖</span>
+        <p>„KI? Das ist doch nur was für Großkonzerne – nicht für meinen Betrieb."</p>
+      </div>
+      <div class="prob-card reveal">
+        <span class="prob-emoji">📍</span>
+        <p>„Meine Kunden finden mich nicht online – dabei bin ich seit 20 Jahren hier."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section id="leistungen">
+  <div class="wrap">
+    <div class="sec-label reveal">Was wir tun</div>
+    <h2 class="sec-title reveal">Leistungen die wirklich wirken.</h2>
+    <p class="sec-sub reveal">Maßgeschneidert für Ihren Betrieb – von Google Maps bis Social Media. Alles aus einer Hand, alles mit Herz.</p>
+
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-num">01</div>
+        <span class="svc-icon">📍</span>
+        <h3>Google Maps & Business</h3>
+        <p>Vollständige Optimierung Ihres Google-Eintrags – Fotos, Öffnungszeiten, Angebote, Q&A. Damit Kunden Sie finden, bevor der Wettbewerb sie sieht.</p>
+        <span class="svc-tag">→ Mehr Laufkundschaft</span>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">02</div>
+        <span class="svc-icon">🎯</span>
+        <h3>Google Ads (Search & Display)</h3>
+        <p>Zertifizierte Kampagnen die Ihr Budget respektieren. Wir schalten Anzeigen, die echte Kunden bringen – nicht nur Klicks ohne Ergebnis.</p>
+        <span class="svc-tag">→ Messbare Reichweite</span>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">03</div>
+        <span class="svc-icon">📱</span>
+        <h3>Social Media Betreuung</h3>
+        <p>Instagram, Facebook & Co. – authentisch, regelmäßig, persönlich. Ihre Kunden sollen Sie kennenlernen – nicht ein gesichtsloses Unternehmen.</p>
+        <span class="svc-tag">→ Echte Kundennähe</span>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">04</div>
+        <span class="svc-icon">⭐</span>
+        <h3>Google Bewertungen</h3>
+        <p>Automatische Erinnerungen nach dem Einkauf. Mehr echte 5-Sterne-Bewertungen ohne Aufwand. Einmal eingerichtet – läuft von selbst.</p>
+        <span class="svc-tag">→ Bessere Reputation</span>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">05</div>
+        <span class="svc-icon">📊</span>
+        <h3>Web Analytics & Daten</h3>
+        <p>Eigene Server bei Contabo in München. DSGVO-konform, sicher, regional. Wir messen was funktioniert – und optimieren datenbasiert.</p>
+        <span class="svc-tag">→ Kluge Entscheidungen</span>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">06</div>
+        <span class="svc-icon">💌</span>
+        <h3>Kundenbindung & CRM</h3>
+        <p>Geburtstags-Grüße, Sonderangebote, Feiertags-Nachrichten – persönlich und automatisiert. Wie früher der Stammtisch, nur digital und skalierbar.</p>
+        <span class="svc-tag">→ Treue Stammkunden</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AdSense Zone 2 – between services and GMB -->
+<!-- ADSENSE ZONE MIDDLE: 336x280 Rectangle
+<div class="ad-zone" style="padding: 1rem 2rem; max-width: 400px; margin: 0 auto;">
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+</div>
+-->
+
+<!-- ============================================================
+     GOOGLE MY BUSINESS INTEGRATION
+     ============================================================ -->
+<section id="google-profil" class="gmb-section sec-alt">
+  <div class="wrap">
+    <div class="gmb-grid">
+
+      <!-- Visual: simulated GMB card -->
+      <div class="gmb-visual reveal">
+        <div class="gmb-floating-badge">Google<br>zertifiziert ✓</div>
+        <div class="gmb-card-sim">
+          <div class="gmb-card-header">
+            <h4>Consulting.Land</h4>
+            <p>Digitale Marketingberatung · Einzelhandel</p>
+            <div class="gmb-stars">
+              ★★★★★ <span>5.0 · Google Business</span>
+            </div>
+          </div>
+          <div class="gmb-card-body">
+            <div class="gmb-meta-row">
+              <span class="gmb-meta-icon">✉️</span>
+              hallo@consulting.land
+            </div>
+            <div class="gmb-meta-row">
+              <span class="gmb-meta-icon">🌐</span>
+              consulting.land
+            </div>
+            <div class="gmb-meta-row">
+              <span class="gmb-meta-icon">🏢</span>
+              DACH-Region · Server: München
+            </div>
+            <div class="gmb-meta-row">
+              <span class="gmb-meta-icon">🕐</span>
+              Antwortzeit: &lt; 2 Stunden
+            </div>
+          </div>
+          <div class="gmb-card-actions">
+            <div class="gmb-action-btn">🌐 Website</div>
+            <div class="gmb-action-btn">📞 Anrufen</div>
+            <div class="gmb-action-btn">📍 Route</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="gmb-info reveal">
+        <div class="sec-label">Google My Business</div>
+        <h2>Ihr Betrieb auf Google –<br>vollständig & sichtbar.</h2>
+        <p>Wussten Sie dass 76% aller Verbraucher, die auf ihrem Smartphone nach lokalen Unternehmen suchen, innerhalb von 24 Stunden eines dieser Unternehmen aufsuchen?</p>
+        <p>Wir optimieren Ihr Google Business Profil vollständig – damit Sie gefunden werden, bevor der Wettbewerb es tut.</p>
+
+        <div class="gmb-features">
+          <div class="gmb-feature">Aktuelle Fotos & Videos die Kunden ansprechen</div>
+          <div class="gmb-feature">Öffnungszeiten & Sonderzeiten immer aktuell</div>
+          <div class="gmb-feature">Beiträge & Angebote für maximale Sichtbarkeit</div>
+          <div class="gmb-feature">Professionelle Antworten auf alle Bewertungen</div>
+          <div class="gmb-feature">Q&A Sektion aufgebaut und gepflegt</div>
+          <div class="gmb-feature">Monatliche Performance-Reports</div>
+        </div>
+
+        <a href="https://share.google/tLvUBvVXKmT4RsITs" target="_blank" rel="noopener" class="gmb-open-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="white"/>
+          </svg>
+          Unser Google Business Profil ansehen
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-label reveal">So arbeiten wir</div>
+    <h2 class="sec-title reveal">Vier Schritte. Kein Stress.</h2>
+    <p class="sec-sub reveal">Von der ersten Analyse bis Sie online strahlen – einfach, klar, persönlich begleitet.</p>
+
+    <div class="process-row">
+      <div class="step reveal">
+        <div class="step-circle">1</div>
+        <h4>Analyse</h4>
+        <p>Wir schauen gemeinsam wo Sie heute stehen – kostenlos und ohne Verpflichtung.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-circle">2</div>
+        <h4>Verstehen</h4>
+        <p>Was brauchen Ihre Kunden wirklich? Wir hören zu – keine Fachwörter, kein Druck.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-circle">3</div>
+        <h4>Umsetzen</h4>
+        <p>Mensch und Technik arbeiten Hand in Hand – schnell, effizient, auf eigenen Servern.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-circle">4</div>
+        <h4>Strahlen</h4>
+        <p>Ihre Kunden finden Sie. Online und offline. Und sie kommen wieder.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REFERENCES MARQUEE
+     ============================================================ -->
+<section id="referenzen" class="marquee-section sec-alt" style="padding: 3rem 0;">
+  <div class="wrap reveal" style="padding: 0 2rem; margin-bottom: 1.5rem;">
+    <div class="sec-label">Vertrauen seit Jahren</div>
+    <h2 class="sec-title">Unsere Referenzen.</h2>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="ref-chip">SEB / Krups</span>
+      <span class="ref-chip">De'Longhi</span>
+      <span class="ref-chip">MediaMarkt</span>
+      <span class="ref-chip">Expert</span>
+      <span class="ref-chip">Apple</span>
+      <span class="ref-chip">Siemens</span>
+      <span class="ref-chip">Segway Navimow</span>
+      <span class="ref-chip">Heinrich Müller GmbH</span>
+      <span class="ref-chip">UPS</span>
+      <span class="ref-chip">Kühne &amp; Nagel</span>
+      <span class="ref-chip">DSV</span>
+      <span class="ref-chip">Roman Mayer</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ref-chip">SEB / Krups</span>
+      <span class="ref-chip">De'Longhi</span>
+      <span class="ref-chip">MediaMarkt</span>
+      <span class="ref-chip">Expert</span>
+      <span class="ref-chip">Apple</span>
+      <span class="ref-chip">Siemens</span>
+      <span class="ref-chip">Segway Navimow</span>
+      <span class="ref-chip">Heinrich Müller GmbH</span>
+      <span class="ref-chip">UPS</span>
+      <span class="ref-chip">Kühne &amp; Nagel</span>
+      <span class="ref-chip">DSV</span>
+      <span class="ref-chip">Roman Mayer</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="ueber">
+  <div class="wrap">
+    <div class="about-grid">
+
+      <div class="about-text reveal">
+        <div class="sec-label">Über mich</div>
+        <h2>Nerd trifft Praxisleben.<br>Technik trifft Menschlichkeit.</h2>
+        <p>Ich bin kein Berater vom Schreibtisch. Ich war da – im Lager, im Verkaufsraum, direkt beim Kunden. Mit Händen die gearbeitet haben und Augen die verstehen, was lokale Unternehmer wirklich brauchen.</p>
+        <p>Studiert in Logistik & Supply Chain Management, jahrelang im Feld bei UPS, Kühne+Nagel, DSV und Roman Mayer. Heute als Google-zertifizierter Digital-Spezialist mit eigenem Server-Stack bei Contabo in München – regional, sicher, DSGVO-konform.</p>
+        <p class="about-highlight">Ich spreche Ihre Sprache. Kein Buzzword-Bingo. Kein Überforderungsstress.</p>
+
+        <!-- Projects -->
+        <div class="sec-label" style="margin-top:2.5rem;">Ausgewählte Projekte</div>
+        <div class="projects-grid">
+          <a href="https://socialanimal.earth/" target="_blank" rel="noopener" class="proj-card">
+            <span class="proj-emoji">🦁</span>
+            <div class="proj-name">socialanimal.earth</div>
+            <div class="proj-type">Social Media Plattform</div>
+          </a>
+          <a href="https://antitech.de/" target="_blank" rel="noopener" class="proj-card">
+            <span class="proj-emoji">⚡</span>
+            <div class="proj-name">antitech.de</div>
+            <div class="proj-type">Tech-Projekt</div>
+          </a>
+          <a href="https://kafa.network/" target="_blank" rel="noopener" class="proj-card">
+            <span class="proj-emoji">🌐</span>
+            <div class="proj-name">kafa.network</div>
+            <div class="proj-type">Netzwerk-Plattform</div>
+          </a>
+          <div class="proj-card" style="cursor:default; opacity:0.5;">
+            <span class="proj-emoji">➕</span>
+            <div class="proj-name">Viele mehr...</div>
+            <div class="proj-type">Auf Anfrage</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-dot">🎓</div>
+          <div class="tl-body">
+            <h4>Studium Logistik & Supply Chain Management</h4>
+            <p>Fundiertes Wissen in Prozessoptimierung und Effizienz – heute angewendet auf digitale Systeme und Workflows.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">🚚</div>
+          <div class="tl-body">
+            <h4>UPS · DSV · Kühne+Nagel · Roman Mayer</h4>
+            <p>Jahrelange Praxis in internationaler Logistik. Systeme, Prozesse, Kundenservice auf höchstem Niveau.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">🏪</div>
+          <div class="tl-body">
+            <h4>Fachberater & Merchandiser ab 2017</h4>
+            <p>SEB/Krups, De'Longhi, Apple, Siemens, Segway Navimow via TimeTrax – nah am Kunden, nah am Produkt.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">🌐</div>
+          <div class="tl-body">
+            <h4>Consulting.Land – Digital für Lokale</h4>
+            <p>Eigene Systeme, eigene Server (Contabo München), eigene Methoden. Für lokale Unternehmen die wachsen wollen – regional für regional.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">✅</div>
+          <div class="tl-body">
+            <h4>3× Google Zertifiziert</h4>
+            <p>Google Ads Display, Google Ads Search, Google Analytics IQ – offizielle Zertifikate für professionelle Kampagnen.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="kontakt" class="sec-alt">
+  <div class="wrap">
+    <div class="sec-label reveal">Kontakt</div>
+    <h2 class="sec-title reveal">Lassen Sie uns sprechen.</h2>
+    <div class="contact-box reveal">
+
+      <div class="contact-info">
+        <h2>Kein Angebot ohne<br>echtes Gespräch.</h2>
+        <p>Wir antworten persönlich – innerhalb von 2 Stunden. Kein Callcenter, kein Bot. Direkt zu Ihrem Ansprechpartner.</p>
+
+        <div class="contact-detail">
+          <div class="cd-icon">✉️</div>
+          <a href="mailto:hallo@consulting.land">hallo@consulting.land</a>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">📍</div>
+          <span>DACH-Region · Server: Contabo München</span>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">🕐</div>
+          <span>Antwortzeit: weniger als 2 Stunden</span>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">🔒</div>
+          <span>100% DSGVO-konform</span>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">☁️</div>
+          <span>Hosting: Contabo GmbH, München</span>
+        </div>
+
+        <a href="https://share.google/tLvUBvVXKmT4RsITs" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--google-b);text-decoration:none;font-size:0.85rem;font-weight:600;margin-top:1.2rem;">
+          📍 Google Business Profil →
+        </a>
+      </div>
+
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Ihr Name *" required>
+          <input type="text" placeholder="Ihr Betrieb">
+        </div>
+        <input type="email" placeholder="E-Mail Adresse *" required>
+        <select>
+          <option value="" disabled selected>Thema auswählen...</option>
+          <option>Google Maps / Business Profil</option>
+          <option>Google Ads Kampagnen</option>
+          <option>Social Media Betreuung</option>
+          <option>Google Bewertungen</option>
+          <option>Webseite & Sichtbarkeit</option>
+          <option>Sonstiges</option>
+        </select>
+        <textarea placeholder="Ihre Nachricht – Was beschäftigt Sie? Wir hören zu..."></textarea>
+        <p style="font-size:0.75rem;color:var(--text-dim);line-height:1.5;">
+          Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zur Anfragenbearbeitung gemäß unserer
+          <a href="/datenschutz.html" style="color:var(--accent);text-decoration:none;">Datenschutzerklärung</a> zu.
+        </p>
+        <button type="submit" class="form-btn">Gespräch anfragen →</button>
+        <p id="form-success">✓ Vielen Dank! Wir melden uns innerhalb von 2 Stunden persönlich.</p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- AdSense Zone 3 – before footer -->
+<!-- ADSENSE ZONE BOTTOM: Responsive Banner
+<div class="ad-zone" style="padding: 1rem 2rem;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+-->
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <a href="/" class="logo" style="font-size:1.1rem;">Consulting<span class="logo-dot">.</span>Land</a>
+      <p>Google-zertifizierte digitale Begleitung für Handwerk & Einzelhandel im DACH-Raum. Eigene Server bei Contabo, München. DSGVO-konform seit Tag 1.</p>
+      <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap;">
+        <span class="f-badge">🔒 DSGVO-konform</span>
+        <span class="f-badge">☁️ Server: München</span>
+        <span class="f-badge">✅ Google Zertifiziert</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Leistungen</h5>
+      <a href="#leistungen">Google Maps & Business</a>
+      <a href="#leistungen">Google Ads</a>
+      <a href="#leistungen">Social Media</a>
+      <a href="#leistungen">Bewertungen</a>
+      <a href="#leistungen">Analytics & Daten</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Unternehmen</h5>
+      <a href="#ueber">Über uns</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#google-profil">Google Profil</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Rechtliches</h5>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <button onclick="reopenCookies()">Cookie-Einstellungen</button>
+      <a href="mailto:hallo@consulting.land">hallo@consulting.land</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Consulting.Land · Mit ❤️ für lokale Unternehmen im DACH-Raum.</span>
+    <div class="footer-badges">
+      <span class="f-badge">Google Ads Display ✓</span>
+      <span class="f-badge">Google Ads Search ✓</span>
+      <span class="f-badge">Google Analytics IQ ✓</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+/* ── CANVAS PARTICLE NETWORK ── */
+(function(){
+  const c = document.getElementById('bg-canvas');
+  const ctx = c.getContext('2d');
+  let W, H, pts = [];
+
+  function resize(){
+    W = c.width  = window.innerWidth;
+    H = c.height = window.innerHeight;
+  }
+
+  class Pt {
+    constructor(){this.r();}
+    r(){
+      this.x = Math.random()*W;
+      this.y = Math.random()*H;
+      this.vx = (Math.random()-.5)*.25;
+      this.vy = (Math.random()-.5)*.25;
+      this.s  = Math.random()*1.2+.3;
+      this.o  = Math.random()*.5+.1;
+      this.c  = Math.random()>.7?'#00e5a0':Math.random()>.5?'#6c5ce7':'#ffffff';
+    }
+    tick(){
+      this.x+=this.vx; this.y+=this.vy;
+      if(this.x<0||this.x>W||this.y<0||this.y>H) this.r();
+    }
+    draw(){
+      ctx.globalAlpha=this.o;
+      ctx.fillStyle=this.c;
+      ctx.beginPath();
+      ctx.arc(this.x,this.y,this.s,0,Math.PI*2);
+      ctx.fill();
+    }
+  }
+
+  function init(){
+    pts=[];
+    const n=Math.min(100,Math.floor(W*H/12000));
+    for(let i=0;i<n;i++) pts.push(new Pt());
+  }
+
+  function lines(){
+    for(let i=0;i<pts.length;i++)
+      for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
+        const d=Math.sqrt(dx*dx+dy*dy);
+        if(d<110){
+          ctx.globalAlpha=(1-d/110)*.1;
+          ctx.strokeStyle='#00e5a0';
+          ctx.lineWidth=.5;
+          ctx.beginPath();
+          ctx.moveTo(pts[i].x,pts[i].y);
+          ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.stroke();
+        }
+      }
+  }
+
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    lines();
+    pts.forEach(p=>{p.tick();p.draw();});
+    ctx.globalAlpha=1;
+    requestAnimationFrame(frame);
+  }
+
+  resize(); init(); frame();
+  window.addEventListener('resize',()=>{resize();init();});
+})();
+
+/* ── SCROLL REVEAL ── */
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  const io  = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('vis');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.08});
+  els.forEach((el,i)=>{
+    el.style.transitionDelay = (i%4)*0.08+'s';
+    io.observe(el);
+  });
+})();
+
+/* ── NAV SCROLL EFFECT ── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('main-nav').style.background =
+    window.scrollY>60 ? 'rgba(8,8,16,0.96)' : 'rgba(8,8,16,0.75)';
+});
+
+/* ── HAMBURGER ── */
+function toggleMenu(){
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+/* ── FORM ── */
+function handleForm(e){
+  e.preventDefault();
+  const s = document.getElementById('form-success');
+  s.style.display='block';
+  e.target.reset();
+  setTimeout(()=>s.style.display='none', 5000);
+}
+
+/* ── COOKIE LOGIC ── */
+function cookieConsent(){
+  const saved = localStorage.getItem('cl_cookies');
+  if(!saved) document.getElementById('cookie-banner').classList.add('show');
+}
+
+function acceptAll(){
+  localStorage.setItem('cl_cookies', JSON.stringify({necessary:true,functional:true,marketing:true}));
+  document.getElementById('cookie-banner').classList.remove('show');
+  loadAdsense();
+}
+
+function saveSelection(){
+  const func = document.getElementById('toggle-func').checked;
+  const ads  = document.getElementById('toggle-ads').checked;
+  localStorage.setItem('cl_cookies', JSON.stringify({necessary:true,functional:func,marketing:ads}));
+  document.getElementById('cookie-banner').classList.remove('show');
+  if(ads) loadAdsense();
+}
+
+function reopenCookies(){
+  document.getElementById('cookie-banner').classList.add('show');
+}
+
+function loadAdsense(){
+  // Uncomment after AdSense approval and fill in your publisher ID:
+  /*
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX';
+  s.crossOrigin = 'anonymous';
+  document.head.appendChild(s);
+  */
+}
+
+/* Run on load */
+window.addEventListener('DOMContentLoaded', cookieConsent);
+
+/* Check saved consent and load ads if approved */
+(function(){
+  const saved = localStorage.getItem('cl_cookies');
+  if(saved){
+    try{
+      const c = JSON.parse(saved);
+      if(c.marketing) loadAdsense();
+    } catch(e){}
+  }
+})();
+</script>
+
+<!-- AdSense Script – activate after approval
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+
+</body>
+</html>
