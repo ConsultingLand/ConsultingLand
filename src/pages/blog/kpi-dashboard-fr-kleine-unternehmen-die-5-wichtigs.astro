@@ -1,0 +1,96 @@
+---
+title: "KPI-Dashboard für kleine Unternehmen: Die 5 wichtigsten Kennzahlen"
+description: "Wichtige KPIs für kleine Unternehmen. Erstellen Sie ein effektives Dashboard für bessere Geschäftsentscheidungen und nachhaltiges Wachstum."
+publishDate: "2026-04-05"
+author: "Consulting.Land Team"
+tags: ["Business", "Consulting", "Management"]
+
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <article class="prose prose-lg mx-auto">
+      
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{frontmatter.title}</h1>
+        <div class="text-gray-600 mb-4">
+          <time datetime={frontmatter.publishDate}>
+            {new Date(frontmatter.publishDate).toLocaleDateString('de-DE', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </time>
+          <span class="mx-2">•</span>
+          <span>Von {frontmatter.author}</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-center">
+          {frontmatter.tags.map(tag => (
+            <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">{tag}</span>
+          ))}
+        </div>
+      </header>
+
+      <div class="prose-content">
+        
+<p><h1>KPI-Dashboard für kleine Unternehmen: Die 5 wichtigsten Kennzahlen</h1></p>
+
+<p><h2>Warum KPIs für kleine Unternehmen essentiell sind</h2></p>
+
+<p>Ohne messbare Kennzahlen navigieren Sie im Blindflug. Ein gut durchdachtes KPI-Dashboard gibt Ihnen die Kontrolle über Ihr Unternehmen zurück.</p>
+
+<p><h2>Die 5 wichtigsten KPIs</h2></p>
+
+<p><h3>1. Customer Acquisition Cost (CAC)</h3></p>
+
+<p><strong>Was:</strong> Kosten für die Gewinnung eines neuen Kunden</p>
+<p><strong>Berechnung:</strong> Marketing-Ausgaben ÷ Anzahl neuer Kunden</p>
+<p><strong>Ziel:</strong> Kontinuierliche Reduzierung</p>
+
+<p><h3>2. Customer Lifetime Value (CLV)</h3></p>
+
+<p><strong>Was:</strong> Gesamtwert eines Kunden über die Beziehungsdauer</p>
+<p><strong>Berechnung:</strong> Durchschnittlicher Bestellwert × Kauffrequenz × Kundenlebensdauer</p>
+<p><strong>Ziel:</strong> CLV > 3x CAC</p>
+
+<p><h3>3. Monthly Recurring Revenue (MRR)</h3></p>
+
+<p><strong>Was:</strong> Vorhersagbare monatliche Umsätze</p>
+<p><strong>Wichtig für:</strong> Planungssicherheit und Wachstumsmessung</p>
+<p><strong>Ziel:</strong> Stetiges Wachstum von 10-20% monatlich</p>
+
+<p><h3>4. Cash Flow</h3></p>
+
+<p><strong>Was:</strong> Liquiditätsübersicht</p>
+<p><strong>Komponenten:</strong> Einnahmen - Ausgaben = freier Cashflow</p>
+<p><strong>Ziel:</strong> Immer positiver operativer Cashflow</p>
+
+<p><h3>5. Employee Productivity</h3></p>
+
+<p><strong>Was:</strong> Leistung pro Mitarbeiter</p>
+<p><strong>Berechnung:</strong> Umsatz ÷ Anzahl Mitarbeiter</p>
+<p><strong>Ziel:</strong> Kontinuierliche Steigerung durch bessere Prozesse</p>
+
+<p><h2>Dashboard-Implementierung</h2></p>
+
+<ul>
+  <li><strong>Automatisierung:</strong> Nutzen Sie Tools wie Google Data Studio</li>
+  <li><strong>Visualisierung:</strong> Klare Diagramme statt Zahlenwüsten</li>
+  <li><strong>Regelmäßigkeit:</strong> Wöchentliche Reviews</li>
+  <li><strong>Actionable Insights:</strong> Jede Kennzahl muss zu Entscheidungen führen</li>
+</ul>
+
+<p><h2>Fazit</h2></p>
+
+<p>Ein effektives KPI-Dashboard ist Ihr Navigationssystem zum Unternehmenserfolg. Starten Sie mit diesen 5 Kennzahlen und erweitern Sie schrittweise.</p>
+
+<ul>
+  <li>--</li>
+</ul>
+<p>*Artikel generiert am 05.04.2026 für consulting.land*</p>
+      </div>
+
+    </article>
+  </main>
+</Layout>
