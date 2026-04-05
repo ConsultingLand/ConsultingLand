@@ -1,0 +1,95 @@
+---
+title: "Blog - Consulting.Land"
+description: "Aktuelle Artikel zu Change Management, Leadership und digitaler Transformation für Unternehmen."
+
+import Layout from '../../layouts/Layout.astro';
+
+// Blog-Artikel Liste
+const posts = [
+  {
+    title: "Change Management 2026: Teams durch digitale Transformation führen",
+    description: "Erfolgreiche Change Management Strategien für 2026. Führen Sie Ihr Team durch digitale Transformationen mit bewährten Methoden.",
+    publishDate: "2026-04-05",
+    slug: "change-management-2026",
+    tags: ["Change Management", "Digitale Transformation", "Leadership"]
+  }
+];
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <main class="container mx-auto px-4 py-8 max-w-6xl">
+    
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Consulting.Land Blog</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Praktische Insights zu Change Management, Leadership und digitaler Transformation für moderne Unternehmen.
+      </p>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {posts.map(post => (
+        <article class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+          
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              {post.tags.map(tag => (
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+            
+            <h2 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+              <a href={`/blog/${post.slug}`} class="hover:text-blue-600 transition-colors">
+                {post.title}
+              </a>
+            </h2>
+            
+            <p class="text-gray-600 mb-4 line-clamp-3">
+              {post.description}
+            </p>
+            
+            <div class="flex items-center justify-between">
+              <time class="text-sm text-gray-500" datetime={post.publishDate}>
+                {new Date(post.publishDate).toLocaleDateString('de-DE', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+              
+              <a 
+                href={`/blog/${post.slug}`} 
+                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+              >
+                Weiterlesen →
+              </a>
+            </div>
+          </div>
+          
+        </article>
+      ))}
+    </section>
+
+    <div class="text-center mt-12">
+      <p class="text-gray-600">
+        Weitere Artikel folgen in Kürze. Bleiben Sie dran für mehr praktische Business-Insights!
+      </p>
+    </div>
+
+  </main>
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
